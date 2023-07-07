@@ -1,0 +1,35 @@
+/orb_slam2:
+  ros__parameters:
+    publish_publish_pointcloud: true
+    publish_pose: true
+    publish_tf: true
+    use_ros_cordinate: true
+    load_map: false
+    world_frame_id_: "map"
+    camera_frame_id: "camera_optical_frame"
+    # voc path is relative path
+    vocabulary_file: "config/ORBvoc.txt"
+    # map path is absolute path
+    map_file: "/home/abc/"
+
+    camera:
+      image_topic: "image_raw"
+      camera_info_topic: "camera_info"
+      fps: 210
+      rgb_encoding: true
+      baseline: 0.05
+
+    ORBextractor:
+      # ORB Extractor: Number of features per image
+      nFeatures: 1000
+      # ORB Extractor: Scale factor between levels in the scale pyramid 
+      scaleFactor: 1.2
+      # ORB Extractor: Number of levels in the scale pyramid	
+      nLevels: 8
+      # ORB Extractor: Fast threshold
+      # Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+      # Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+      # You can lower these values if your images have low contrast	
+      iniThFAST: 20
+      minThFAST: 7
+   
