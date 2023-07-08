@@ -1,10 +1,7 @@
 #ifndef ORB_SLAM2_ROS2_MONO_NODE_HPP_
 #define ORB_SLAM2_ROS2_MONO_NODE_HPP_
 
-#include <image_transport/camera_subscriber.hpp>
 #include <rclcpp/rclcpp.hpp>
-#include <image_transport/image_transport.hpp>
-#include <image_transport/subscriber.hpp>
 #include <sensor_msgs/msg/image.hpp>
 
 #include "System.h"

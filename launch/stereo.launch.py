@@ -9,11 +9,11 @@ def generate_launch_description():
     from launch import LaunchDescription
 
     node_params = os.path.join(
-    get_package_share_directory('orb_slam2_ros2'), 'config', 'config.yaml')
+    get_package_share_directory('orb_slam2_ros2'), 'config', 'stereo.yaml')
 
     mono_node = Node(
         package='orb_slam2_ros2',
-        executable='mono_node',
+        executable='stereo_node',
         emulate_tty=True,
         output='both',
         parameters=[node_params],

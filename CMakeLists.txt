@@ -5,7 +5,7 @@ project(orb_slam2_ros2)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-#set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 #Build ORBSLAM2
 find_package(OpenCV REQUIRED)
@@ -80,6 +80,11 @@ target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} orb_slam2)
 rclcpp_components_register_node(${PROJECT_NAME}
   PLUGIN ORB_SLAM2::MonoNode
   EXECUTABLE mono_node
+)
+
+rclcpp_components_register_node(${PROJECT_NAME}
+  PLUGIN ORB_SLAM2::StereoNode
+  EXECUTABLE stereo_node
 )
 
 ament_auto_package(

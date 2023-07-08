@@ -13,7 +13,8 @@
     map_file: "/home/abc/"
 
     camera:
-      image_topic: "image_raw"
+      left_image_topic: "left/image_raw"
+      right_image_topic: "right/image_raw"
       camera_info_topic: "camera_info"
       fps: 210
       rgb_encoding: true
